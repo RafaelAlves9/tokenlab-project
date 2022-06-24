@@ -68,7 +68,7 @@ export default function ModalAddEvent(props) {
               <label htmlFor="start"><strong>Início</strong></label>
               <TextField
                 fullWidth
-                type="date"
+                type="datetime-local"
                 id="start"
                 name="start"
                 value={formik.values.start}
@@ -81,7 +81,7 @@ export default function ModalAddEvent(props) {
               <label htmlFor="finish"><strong>Término</strong></label>
               <TextField
                 fullWidth
-                type="date"
+                type="datetime-local"
                 id="finish"
                 name="finish"
                 value={formik.values.finish}
