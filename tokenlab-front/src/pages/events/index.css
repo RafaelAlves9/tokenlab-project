@@ -1,0 +1,12 @@
+.username{
+    font-size: 22px;
+}
+.container-events{
+    margin: 20px auto;
+    width: 95%;
+    max-width: 1200px;
+}
+.container-event-cards{
+    display: flex;
+    flex-wrap: wrap;
+}

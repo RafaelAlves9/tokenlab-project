@@ -1,0 +1,34 @@
+.card-event{
+    margin: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 330px;
+    height: 300px;
+    font-size: 16px;
+    font-weight: 500;
+
+    background-color: var(--color-1);
+    border-radius: 10px;
+}
+.category{
+    overflow: hidden;
+    width: 100%;
+    height: 25%;
+    color: #fff;
+}
+.tittle-category{
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+}
+.category-action{
+    height: 25%;
+    overflow: hidden;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+.icon-action{
+    margin-left: 5px;
+    cursor: pointer;
+}

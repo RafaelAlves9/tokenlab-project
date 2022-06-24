@@ -1,0 +1,16 @@
+.link-login{
+    font-size: 17px;
+}
+.link-login span{
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.error-login{
+    margin: 15px auto;
+    padding: 15px 0;
+    width: 65%;
+    background-color: var(--transparent);
+    color: red;
+    font-weight: 700;
+}
