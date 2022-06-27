@@ -12,8 +12,9 @@ export const CardEvent = (props) => {
     const URL = "http://localhost:8080/";
 
     const removeEvent = (id) => {
-        axios.delete(`${URL}delete-event/${id}`)
-        window.location.reload()
+        if ( window.confirm("Deseja excluir esse evento?") ){
+            axios.delete(`${URL}delete-event/${id}`)
+        } else return
     };
 
     return(

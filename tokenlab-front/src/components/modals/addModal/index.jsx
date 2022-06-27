@@ -32,6 +32,7 @@ export default function ModalAddEvent(props) {
     if (!formik.errors.description && !formik.errors.start && !formik.errors.finish){
       alert(`Evento criado com sucesso!`);
       handleClose();
+      formik.handleReset()
 
       //adicionando evento ao banco
       axios.post(`${URL}add-event`, {

@@ -32,7 +32,6 @@ export default function ModalEditEvent(props) {
     if (!formik.errors.description && !formik.errors.start && !formik.errors.finish){
       alert(`Evento editado com sucesso!`);
       handleClose();
-      window.location.reload()
 
       axios.put(`${URL}edit-event/${formik.values.idevent}`, {
         description: formik.values.description,
@@ -67,7 +66,7 @@ export default function ModalEditEvent(props) {
             <label htmlFor="start"><strong>Início</strong></label>
             <TextField
                 fullWidth
-                type="date"
+                type="datetime-local"
                 id="start"
                 name="start"
                 value={formik.values.start}
@@ -80,7 +79,7 @@ export default function ModalEditEvent(props) {
             <label htmlFor="finish"><strong>Término</strong></label>
             <TextField
                 fullWidth
-                type="date"
+                type="datetime-local"
                 id="finish"
                 name="finish"
                 value={formik.values.finish}

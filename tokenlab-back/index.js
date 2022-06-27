@@ -1,14 +1,14 @@
 const express = require('express');
 const app = express();
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const cors = require('cors');
 
 //conexao sql
 const db = mysql.createPool({
     host: "localhost",
     user: "root",
-    password: "",
-    database: "tokenlab",
+    password: "152369Jr",
+    database: "dbrafael",
 });
 
 app.use(cors());
@@ -20,7 +20,7 @@ app.post('/register', (req, res) => {
     const { username } = req.body
     const { password } = req.body
     
-    let SQL = "INSERT INTO users ( name, username, password ) VALUES ( ?,?,? )"
+    let SQL = "INSERT INTO users ( name, username, password ) VALUES ( ?,?,? )";
     db.query(SQL, [ name, username, password ], (err,res) => {
         if (err) console.log(err)
         else console.log("funfou")
@@ -28,11 +28,11 @@ app.post('/register', (req, res) => {
 })
 
 app.get('/users', (req, res) => {
-  let SQL = "SELECT * from users"
+  let SQL = "SELECT * from users";
   db.query(SQL, (err, result) => {
     if (err) console.log(err)
     else res.send(result)
-  })
+  });
 })
 
           //TABELA EVENTO
@@ -47,7 +47,7 @@ app.post('/add-event', (req, res) => {
 
   db.query(SQL, [ author, description, start, finish ], (err,res) => {
       if (err) console.log(err);
-      else console.log(res);
+      else return
   });
 });
 
