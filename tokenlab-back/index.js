@@ -5,10 +5,10 @@ const cors = require('cors');
 
 //conexao sql
 const db = mysql.createPool({
-    host: "localhost",
-    user: "root",
-    password: "152369Jr",
-    database: "dbrafael",
+  host: "localhost",
+  user: "root",
+  password: "152369Jr",
+  database: "dbrafael",
 });
 
 app.use(cors());
@@ -42,7 +42,7 @@ app.post('/add-event', (req, res) => {
   const { description } = req.body;
   const { start } = req.body;
   const { finish } = req.body;
-  
+
   let SQL = "INSERT INTO events ( author, description, start, finish ) VALUES ( ?,?,?,? )";
 
   db.query(SQL, [ author, description, start, finish ], (err,res) => {
